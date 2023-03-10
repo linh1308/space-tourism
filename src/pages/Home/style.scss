@@ -1,0 +1,34 @@
+@import '../../scss/index.scss';
+
+.home-wrapper {
+    background-image: url('../../assets/home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    .hero {
+        @include flex(center, center);
+        margin-top: 200px;
+
+        .introduce {
+            width: 30%;
+            font-family: $font-family;
+            margin-right: 200px;
+            
+            .title {
+                color: $text-color-2;
+                font-size: $heading-5;
+            }
+
+            .heading {
+                font-size: $heading-2;
+            }
+
+            & > p {
+                font-size: $text-size;
+                width: 70%;
+                color: $text-color-2;
+            }
+        }
+    }
+}
