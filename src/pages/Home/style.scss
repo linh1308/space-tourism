@@ -1,10 +1,11 @@
 @import '../../scss/index.scss';
 
 .home-wrapper {
-    background-image: url('../../assets/home/background-home-desktop.jpg');
+    background-image: url('../../../public/assets/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    padding: 30px 100px 0 100px;
+    height: calc(100vh - 30px);
 
     .hero {
         @include flex(center, center);
@@ -12,10 +13,10 @@
 
         .introduce {
             width: 30%;
-            font-family: $font-family;
             margin-right: 200px;
             
             .title {
+                font-family: $font-family-barlow;
                 color: $text-color-2;
                 font-size: $heading-5;
             }
@@ -25,6 +26,7 @@
             }
 
             & > p {
+                font-family: $font-family-barlow;
                 font-size: $text-size;
                 width: 70%;
                 color: $text-color-2;

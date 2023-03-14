@@ -3,7 +3,7 @@
 :root {
   padding: 0;
   margin: 0;
-  font-family: $font-family;
+  font-family: $font-family-bellefair;
   color: $text-color-1;
 }
 
@@ -12,3 +12,28 @@ body {
   margin: 0;
 }
 
+.wrapper {
+  padding: 30px 100px 0 100px;
+  height: calc(100vh - 30px);
+  overflow: hidden;
+}
+
+.step {
+  @include flex(flex-start, flex-start);
+  font-size: $heading-5;
+  font-family: $font-family-barlow;
+  text-transform: uppercase;
+  margin: 100px;
+  
+  .number {
+      color: gray;
+      font-weight: bolder;
+  }
+
+  .title {
+      font-family: $font-family-barlow;
+      color: $text-color-1;
+      font-weight: 400;
+      margin-left: 28px;
+  }
+}

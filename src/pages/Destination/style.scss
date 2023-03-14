@@ -1,0 +1,114 @@
+@import '../../scss/index.scss';
+
+.destination-wrapper {
+    background-image: url('../../../public/assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .body {
+        @include flex(space-between, flex-start);
+        font-family: $font-family-barlow;
+
+        & > img {
+            margin-left: 200px;
+        }
+        
+        .description {
+            width: 50%;
+            margin-left: 150px;
+            font-family: $font-family-barlow;
+            color: $text-color-2;
+            position: relative;
+
+            .options {
+                list-style: none;
+                @include flex(flex-start, center);
+                padding: 0;
+
+                .destination {
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    margin-right: 30px;
+                    cursor: pointer;
+                    position: relative;
+
+                    &.active::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+
+                        width: 100%;
+                        height: 2px;
+                        background-color: $text-color-2;
+                    }
+
+                    &:hover::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -5px;
+                        left: 0;
+
+                        height: 2px;
+                        background-color: $text-color-2;
+                        animation: width 0.2s linear forwards;
+                    }
+                }
+            }
+            
+            .name {
+                font-size: $heading-2;
+                font-family: $font-family-bellefair;
+                text-transform: uppercase;
+            }
+
+            .detail {
+                font-size: $text-size;
+                color: $text-color-2;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 115%;
+                left: 0;
+
+                width: 100%;
+                height: 1px;
+                background-color: rgba($color: $text-color-2, $alpha: 0.5);
+
+            }
+        }
+
+        .distance-time {
+            width: 100%;
+            margin-left: 150px;
+            margin-top: 70px;
+            @include flex(flex-start, center);
+
+            .distance, .time {
+                font-family: $font-family-barlow;
+                text-transform: uppercase;
+                margin-right: 70px;
+                font-size: 28px;
+                
+                & > span {
+                    display: block;
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    color: $text-color-2;
+                }
+            }
+        }
+    }
+}
+
+@keyframes width {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;;
+    }
+}

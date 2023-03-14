@@ -5,7 +5,7 @@ import "./style.scss";
 
 const Home = () => {
 	return (
-		<div className="home-wrapper">
+		<div className="home-wrapper wrapper">
 			<Header />
 			<div className="hero">
 				<div className="introduce">

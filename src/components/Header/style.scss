@@ -3,22 +3,30 @@
 .header-wrapper {
     @include flex(space-between, center);
     height: 100px;
-    padding-top: 30px;
+    font-family: $font-family-barlow;
 
     .header-right {
         background-color: rgba(255, 255, 255, 0.04);
-        @include flex(start, center);
+        @include flex(flex-start, center);
         list-style: none;
         height: 100%;
+
         margin: 0;
         padding-right: 50px;
         backdrop-filter: blur(10px);
         position: relative;
         
         &-item {
+            font-family: $font-family-barlow;
             position: relative;
             margin-left: 30px;
             font-size: $text-size;
+            text-decoration: none;
+            color: $text-color-1;
+
+            & > span {
+                font-weight: 900;
+            }
 
             &:hover {
                 cursor: pointer;
@@ -27,12 +35,12 @@
             &:hover::before {
                 content: '';
                 position: absolute;
-                top: 20px;
+                top: 60px;
                 left: 0;
-                right: 0;
-                width: 100%;
-                height: 3px;
+
+                height: 4px;
                 background-color: rgba($color: #ffffff, $alpha: 0.5);
+                animation: width 0.2s linear forwards;
             }
         }
 
@@ -48,6 +56,13 @@
     }
 }
 
-.logo {
-    margin-left: 50px;
+
+@keyframes width {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }

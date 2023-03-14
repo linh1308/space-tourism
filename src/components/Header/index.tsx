@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const Logo = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
       <circle cx="24" cy="24" r="24" fill="#FFF" />
       <path
         fill="#0B0D17"
@@ -20,10 +21,10 @@ const Header = () => {
         <Logo />
       </div>
       <ul className="header-right">
-        <li className="header-right-item">00 HOME</li>
-        <li className="header-right-item">01 DESTINATION</li>
-        <li className="header-right-item">02 CREW</li>
-        <li className="header-right-item">03 TECHNOLOGY</li>
+        <Link to='/' className="header-right-item"><span>00</span> HOME</Link>
+        <Link to='/destination' className="header-right-item"><span>01</span> DESTINATION</Link>
+        <Link to='/crew' className="header-right-item"><span>02</span> CREW</Link>
+        <Link to='/technology' className="header-right-item"><span>03</span> TECHNOLOGY</Link>
       </ul>
     </div>
   );
